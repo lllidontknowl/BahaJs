@@ -25,8 +25,6 @@ for (var i=1;i<mtable[0].rows.length;i++){
             i=i-1;
             
             break;
-	
-	    }
+	}
     }
-    
 }
