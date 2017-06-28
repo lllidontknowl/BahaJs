@@ -15,11 +15,11 @@ var auther_tmp='';
 var block = false;
 var mtable=document.getElementsByClassName("FM-blist fmb");
 
-for (var i=1;i<mtable[0].rows.length;i++){
+for (i=1;i<mtable[0].rows.length;i++){
     block = false;
     title_tmp=mtable[0].rows[i].cells[2].getElementsByTagName("a")[0].innerHTML;
     auther_tmp=mtable[0].rows[i].cells[4].getElementsByTagName("a")[0].innerHTML;
-    for(var j=0;j<Block_str.length;j++){	    
+    for(j=0;j<Block_str.length;j++){	    
         if(title_tmp.search(Block_str[j])!=-1){
             block = true;
         }
