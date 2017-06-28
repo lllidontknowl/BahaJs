@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BahaPostBlocker
-// @version      1.0
+// @version      1.1
 // @description  把含有關鍵字的文章濾掉
 // @author       wuken0325
 // @include      *forum.gamer.com.tw/*
@@ -16,7 +16,7 @@ for (var i=1;i<mtable[0].rows.length;i++){
     
     for(var j=0;j<Block_str.length;j++){
 	
-        tmp=mtable[0].rows[i].cells[2].innerHTML;
+        tmp=mtable[0].rows[i].cells[2].getElementsByTagName("a")[0].innerHTML;
 	
         if(tmp.search(Block_str[j])!=-1){
 	    
