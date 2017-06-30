@@ -10,10 +10,13 @@
     
 var Block_str=["康妮","寶拉","蔡英文","馬英九","聖結","聖粉","結石","放火","賴界","小幻","康乙己"]; //關鍵字
 var Block_auther=["ss54564152","ru3715","chocolatebox","bennysit2003","daved070708"]; //黑名單
+var Delete_post=[];
 var title_tmp='';
 var auther_tmp='';
 var block = false;
 var mtable=document.getElementsByClassName("FM-blist fmb");
+
+document.getElementsByClassName("BH-pagebtnA")[0].innerHTML += "<a onclick=\"Post_insert(mtable,Delete_post)\">復原文章</a>"
 
 for (i=1;i<mtable[0].rows.length;i++){
     block = false;
@@ -32,7 +35,17 @@ for (i=1;i<mtable[0].rows.length;i++){
     }
 
     if(block==true){
+        Delete_post[Delete_post.length]=mtable[0].rows[i].innerHTML;
         mtable[0].deleteRow(i);
         i=i-1;
     }
 }
+
+function Post_insert(mtable,Delete_post){
+    for(i=0;i<Delete_post.length;i++){
+        var New_post = mtable[0].insertRow(1);
+        var Post_inside = New_post.insertCell(0);
+        Post_inside.innerHTML = Delete_post[i];
+    }
+}
+    
