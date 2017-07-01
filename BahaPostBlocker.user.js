@@ -53,10 +53,12 @@ for (i=1;i<mtable[0].rows.length;i++){
 }
 
 function Post_insert(mtable,Delete_post){
-    for(i=0;i<Delete_post.length;i++){
+    var classname=["","FM-blist2","FM-blist3","FM-blist4","FM-blist5","FM-blist6"];
+    for(i=0;i<Delete_post.length-1;i++){
         var New_post = mtable[0].insertRow(1);
-        for(j=0;j<Delete_post[i].length+1;j++){
+        for(j=0;j<6;j++){
             var Post_inside_tmp = New_post.insertCell(-1);
+            Post_inside_tmp.className = classname[j];
             Post_inside_tmp.innerHTML = Delete_post[j][i];
         }
     }
