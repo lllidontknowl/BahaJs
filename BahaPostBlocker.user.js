@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BahaPostBlocker
-// @version      1.31
+// @version      1.32
 // @description  把含有關鍵字的文章和黑名單從文中列表中濾掉
 // @author       wuken0325
 // @include      *forum.gamer.com.tw/*
@@ -9,7 +9,7 @@
 
     
 var Block_str=["康妮","寶拉","蔡英文","馬英九","聖結","聖粉","結石","放火","賴界","小幻","康乙己"]; //關鍵字，依所需自行修改
-var Block_auther=["daved070708","bennysit2003"]; //黑名單，依所需自行修改
+var Block_auther=["MansTalk","stu92614","bennysit2003"]; //黑名單，依所需自行修改
 var Delete_cell0=[];
 var Delete_cell1=[];
 var Delete_cell2=[];
@@ -20,13 +20,9 @@ var Delete_post=[Delete_cell0,Delete_cell1,Delete_cell2,Delete_cell3,Delete_cell
 var title_tmp='';
 var auther_tmp='';
 var block = false;
+var deleted=false;
 var mtable=document.getElementsByClassName("FM-blist fmb");
 
-document.getElementsByClassName("BH-pagebtnA")[0].innerHTML += "<a id=\"rebutton\">復原文章</a>"; //加入按鈕
-var myButton = document.getElementById("rebutton"); //獲取剛加入的按鈕
-myButton.addEventListener("click", function() {  //給按鈕上個監聽
-    Post_insert(mtable,Delete_post);
-});
 
 
 
@@ -55,7 +51,17 @@ for (i=1;i<mtable[0].rows.length;i++){
         Delete_cell5[Delete_cell5.length]=mtable[0].rows[i].cells[5].innerHTML;
         mtable[0].deleteRow(i);
         i=i-1;
+        deleted=true;
     }
+}
+
+if(deleted===true){ //如果有文章被刪掉
+    document.getElementsByClassName("BH-pagebtnA")[0].innerHTML += "<a id=\"rebutton\">復原文章</a>"; //加入按鈕
+    var myButton = document.getElementById("rebutton"); //獲取剛加入的按鈕
+    myButton.addEventListener("click", function() {  //給按鈕上個監聽
+        Post_insert(mtable,Delete_post);
+         document.getElementsByClassName("BH-pagebtnA")[0].innerHTML= (document.getElementsByClassName("BH-pagebtnA")[0].innerHTML).slice(0,-25); //把按鈕刪掉
+    });
 }
 
 
