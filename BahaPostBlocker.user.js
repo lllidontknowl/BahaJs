@@ -8,8 +8,8 @@
 
 
     
-var Block_str=["康妮","寶拉","蔡英文","馬英九","聖結","聖粉","結石","放火","賴界","小幻","康乙己"]; //關鍵字，依所需自行修改
-var Block_auther=["MansTalk","stu92614","bennysit2003"]; //黑名單，依所需自行修改
+var Block_str=["康妮","寶拉","蔡英文","馬英九","聖結","聖粉","結石","放火","賴界","小幻","康乙己"]; //關鍵字(範例)，依所需自行修改
+var Block_auther=["bennysit2003","oao870122"]; //黑名單(範例)，依所需自行修改
 var Delete_cell0=[];
 var Delete_cell1=[];
 var Delete_cell2=[];
