@@ -50,7 +50,7 @@ for (i=1;i<mtable[0].rows.length;i++){
         Delete_cell4[Delete_cell4.length]=mtable[0].rows[i].cells[4].innerHTML;
         Delete_cell5[Delete_cell5.length]=mtable[0].rows[i].cells[5].innerHTML;
         mtable[0].deleteRow(i);
-        i=i-1;
+        i--;
         deleted=true;
     }
 }
