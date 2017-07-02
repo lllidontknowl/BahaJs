@@ -19,7 +19,7 @@ var Delete_cell5=[];
 var Delete_post=[Delete_cell0,Delete_cell1,Delete_cell2,Delete_cell3,Delete_cell4,Delete_cell5];
 var title_tmp='';
 var auther_tmp='';
-var block = false;
+var block=false;
 var deleted=false;
 var mtable=document.getElementsByClassName("FM-blist fmb");
 
@@ -43,7 +43,7 @@ for (i=1;i<mtable[0].rows.length;i++){
     }
 
     if(block===true){
-        Delete_cell0[Delete_cell0.length]=mtable[0].rows[i].cells[0].innerHTML; //獲取標題的各種值
+        Delete_cell0[Delete_cell0.length]=mtable[0].rows[i].cells[0].innerHTML; //獲取列表一行的各種值
         Delete_cell1[Delete_cell1.length]=mtable[0].rows[i].cells[1].innerHTML;
         Delete_cell2[Delete_cell2.length]=mtable[0].rows[i].cells[2].innerHTML;
         Delete_cell3[Delete_cell3.length]=mtable[0].rows[i].cells[3].innerHTML;
