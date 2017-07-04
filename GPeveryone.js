@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         GPeveryone
 // @version      1.0
-// @description  在文章中，新增一個能給該頁整串GP按鈕
+// @description  在文章中，新增一個能給該頁整串GP按鈕，目前不適用於單篇文章，請按"看整串內容"
 // @author       wuken0325
 // @include      *forum.gamer.com.tw/C.php*
 // ==/UserScript==
