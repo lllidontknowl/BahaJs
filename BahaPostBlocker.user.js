@@ -1,11 +1,8 @@
 // ==UserScript==
 // @name         BahaPostBlocker
-// @version      2.0
+// @version      1.32
 // @description  把含有關鍵字的文章和黑名單從文中列表中濾掉
 // @author       wuken0325
-// @homepageURL  https://github.com/lllidontknowl/BahaJs
-// @updateURL	 https://github.com/lllidontknowl/BahaJs/blob/master/BahaPostBlocker.user.js
-// @downloadURL	 https://git.oschina.net/coldfire/GM/raw/master/popsearch.user.js
 // @include      *forum.gamer.com.tw/*
 // ==/UserScript==
 
