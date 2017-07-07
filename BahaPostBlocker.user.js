@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name         BahaPostBlocker
-// @version      1.32
+// @version      1.33
 // @description  把含有關鍵字的文章和黑名單從文中列表中濾掉
 // @author       wuken0325
 // @include      *forum.gamer.com.tw/*
